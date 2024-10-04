@@ -1,5 +1,3 @@
-import express from 'express'
-
 import { Router } from 'express'
 import { deleteABooking, getAllBookings, getOneBooking, postAllBooking, updateBooking} from '../booking-controller.js'
 
