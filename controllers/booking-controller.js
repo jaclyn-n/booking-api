@@ -7,11 +7,11 @@ export const getOneBooking = (req, res) => {
   res.status(200).json("this is one booking");
 };
 export const postAllBooking = async (req, res) => {
-  const newBooking = await new booking();
+  const newBooking = await new booking(req.body);
 
 
 
-  const bookings = await newBooking.save(req.body);
+  const bookings = await newBooking.save();
 
   res.status(201).json(bookings);
 };
